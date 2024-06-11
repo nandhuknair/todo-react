@@ -1,10 +1,9 @@
 import React,{useState} from 'react'
-import toast from 'react-hot-toast';
+import {toast} from 'sonner';
 
 export const EditTodoForm =({editTodo,task,cancelUpdate,todo})=> {
 
-   
-    const [value,setValue] = useState("")
+    const [value,setValue] = useState(task.task)
     const handleSubmit = e => {
         e.preventDefault();
         if(!value) {
